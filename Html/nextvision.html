@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>NextVision</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.cdnfonts.com/css/japanese-designs" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <style>
+       @import url('https://fonts.cdnfonts.com/css/japanese');
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #eae7dc;
+            display: block;
+        }
+        .nav{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            background-color: #eae7dc;
+            
+            position: fixed;
+            /* border-bottom: 2px solid black; */
+            /* border-style: outset; */
+        }
+        .text{
+            color: #e98074;
+            font-weight: bolder;
+            font-size: 40px;
+            position: relative;
+            margin-top: 10px;
+            margin-left: 50%;
+            font-family:'Brush Script MT', cursive;
+        }
+        .dropbtn{
+            display: none;
+        }
+        .dropdown-content{
+            display: flex;
+            width:400px;
+            margin-top: 10px;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 15px 10px;
+            text-decoration: none;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .dropdown-content a:hover{
+            color: #e85a4f;
+        }
+        .text:hover{
+            color: #e85a4f;
+        }
+        
+        a {
+  text-decoration: none;
+  color: #385A97;
+}
+header {
+  padding: 0;
+  /* position: relative; */
+}
+.status {
+  margin: 11px 0;
+}
+#wrapper {
+  background-color: #fff;
+  width: 60%;
+  /* margin-top: 200px; */
+  margin: 10px auto 0;
+  border: 1px solid #D0D1D5;
+  border-top: 0;
+  border-radius: 2px;
+  padding: 12px;
+}
+
+
+
+.arrow {
+  position: absolute;
+  width: 12px;
+  border: none;
+  height: auto;
+  right: 0px;
+}
+
+.profile-pic {
+    border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+
+.name,
+.date {
+  margin: 0;
+}
+
+.name {
+  color: #385A97;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 12px;
+  color: #90949C;
+}
+
+main {
+  font-size: 13px;
+}
+
+main .status {
+  margin-bottom: 11px;
+}
+
+.img-content {
+  width: 100%;
+  margin-bottom: 11px;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.action a {
+  color: #7F7F7F;
+}
+
+.action div {
+  display: inline-block;
+}
+
+.action div p:hover {
+  text-decoration: underline;
+}
+
+.action div:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.like img,
+.comment img,
+.share img {
+  display: inline-block;
+  width: 18px;
+  vertical-align: text-bottom;
+}
+
+.like p {
+  color: #1787FA;
+}
+
+.like p,
+.comment p,
+.share p {
+  display: inline-block;
+}
+
+.share img {
+  opacity: .2;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+.section{
+    height: 100vh;
+    padding-top: 70px;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="dropdown">
+            <button onclick="myfunction()" class="dropbtn glyphicon glyphicon-menu-hamburger" style="background-color: transparent;border: none;color: black;"></button>
+            <div id="mydropdown" class="dropdown-content">
+                <a href="../Html/home.html" >Home</a>
+                <a href="../Html/Anniversary.html" >Anniversary</a>
+                <a href="../Html/nextvision.html" style="color: #E85A4F;">Next Vision</a>
+            </div>
+        </div>
+            <div class="text">Welcome A Thae Lay</div>
+            </div>
+    
+    <div class="section">
+        <div id="wrapper" >
+
+        <header class="cf">
+          <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png" class="arrow" />
+          <a href=#><img class='profile-pic' src="../Html/zaw.jpg"></a>
+          <h1 class="name">
+                        <a href="#">Zaw Ye Htike</a>
+                    </h1>
+          <p class="date">September 24 2024</p>
+        </header>
+        
+        <p class="status" style="margin-left: 35%;"><span class="fa fa-heart" style="font-size: 48px;color: red;margin-left: 70px;"></span><br><br>In a relationship with  Thiri Han</p>
+        <!-- <img class="img-content" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" /> -->
+    
+        <div class="action">
+          <div class="like">
+            <a href="#">
+              <img src="https://1.bp.blogspot.com/-qns_lZPjg0I/VWY2dO1HN-I/AAAAAAAACVA/akLTMY7RJSk/s1600/Thumbs-up-facebook-icon-small.png" alt="thumbs up" />
+              <p>Like</p>
+            </a>
+          </div>
+    
+          <div class="comment">
+            <a href="#">
+              <p>Comment</p>
+            </a>
+          </div>
+    
+          <div class="share">
+            <a href="#">
+              <p>
+                Share
+              </p>
+            </a>
+          </div>
+    
+        </div>
+    
+        </div>
+        <div id="wrapper">
+    
+        <header class="cf">
+          <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png" class="arrow" />
+          <a href=#><img class='profile-pic' src="../Html/zaw.jpg"></a>
+          <h1 class="name">
+                        <a href="#">Zaw Ye Htike</a>
+                    </h1>
+          <p class="date">Yesterday at 12:21pm</p>
+        </header>
+    
+        <p class="status">ခုချိန်ထိ အနားနားရှိနေပေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်သဲလေးရေ <br>အားငယ်ချိန်၊ပျော်ရွှင်ချိန်တွေတူတူရှိနေပေးလို့ကျေးဇူးအများကြီးတင်ပါတယ်အသဲလေး<br>ခုကစပြီး အများကြီးပိုချစ်ပေးပါဦးနော်</p>
+        <img class="img-content" src="../Html/th1.jpg" />
+    
+        <div class="action">
+          <div class="like">
+            <a href="#">
+              <img src="https://1.bp.blogspot.com/-qns_lZPjg0I/VWY2dO1HN-I/AAAAAAAACVA/akLTMY7RJSk/s1600/Thumbs-up-facebook-icon-small.png" alt="thumbs up" />
+              <p>Like</p>
+            </a>
+          </div>
+    
+          <div class="comment">
+            <a href="#">
+              <p>Comment</p>
+            </a>
+          </div>
+    
+          <div class="share">
+            <a href="#">
+              <p>
+                Share
+              </p>
+            </a>
+          </div>
+    
+        </div>
+    
+        </div>
+        <div id="wrapper">
+    
+        <header class="cf">
+          <img src="http://2016.igem.org/wiki/images/e/e0/Uclascrolldown.png" class="arrow" />
+          <a href=#><img class='profile-pic' src="../Html/zaw.jpg"></a>
+          <h1 class="name">
+                        <a href="#">Zaw Ye Htike</a>
+                    </h1>
+          <p class="date">June 24 2024</p>
+        </header>
+    
+        <p class="status">သီချင်းလေးကြိုက်လားသဲလေး ကြိုက်ရင်ချက်ချင်းဖုန်းဆက်ပြီး အာဘွားလေးပေးပါဦး🫣🫣</p>
+        <img class="img-content" src="../Html/th2.jpg" />
+    
+        <div class="action">
+          <div class="like">
+            <a href="#">
+              <img src="https://1.bp.blogspot.com/-qns_lZPjg0I/VWY2dO1HN-I/AAAAAAAACVA/akLTMY7RJSk/s1600/Thumbs-up-facebook-icon-small.png" alt="thumbs up" />
+              <p>Like</p>
+            </a>
+          </div>
+    
+          <div class="comment">
+            <a href="#">
+              <p>Comment</p>
+            </a>
+          </div>
+    
+          <div class="share">
+            <a href="#">
+              <p>
+                Share
+              </p>
+            </a>
+          </div>
+    
+        </div>
+    
+        </div>
+    </div>
+    <script src="../Html/script.js"></script>
+    <script>
+        function myfunction(){
+            document.getElementById("mydropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

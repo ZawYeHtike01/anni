@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Home</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #eae7dc;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            /* background-color: #000000;
+            opacity: 0.5; */
+            position: fixed;
+            /* border-bottom: 2px solid black; */
+            /* border-style: outset; */
+        }
+        .text{
+            color: #e98074;
+            font-weight: bolder;
+            font-size: 40px;
+            position: relative;
+            margin-top: 10px;
+            margin-left: 50%;
+            font-family:'Brush Script MT', cursive;
+        }
+        .dropbtn{
+            display: none;
+        }
+        .dropdown-content{
+            display: flex;
+            width:400px;
+            margin-top: 10px;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 15px 10px;
+            text-decoration: none;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .dropdown-content a:hover{
+            color: #e85a4f;
+        }
+        .text:hover{
+            color: #e85a4f;
+        }
+        .wrapper{
+            height: 80vh;
+        }
+        
+
+        @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+    
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #E85A4F;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(232,90,79,0); stroke: rgba(232,90,79,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(232,90,79,0); stroke: rgba(232,90,79,1); }
+	80%  {fill: rgba(232,90,79,0); stroke: rgba(232,90,79,1); stroke-width: 3; }
+	100% {
+		fill: rgba(232,90,79,1); stroke: rgba(232,90,79,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {background-color: #eae7dc};
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <button onclick="myfunction()" class="dropbtn glyphicon glyphicon-menu-hamburger" style="background-color: transparent;border: none;color: black;"></button>
+            <div id="mydropdown" class="dropdown-content">
+                <a href="../Html/home.html" style="color: #E85A4F;">Home</a>
+                <a href="../Html/Anniversary.html">Anniversary</a>
+                <a href="../Html/nextvision.html">Next Vision</a>
+            </div>
+        </div>
+        <div class="text">Welcome A Thae Lay</div>
+    </div>
+    <div class="wrapper">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Happy 4 Years And 
+            </text>
+            <text x="50%" y="80%" dy=".35em" text-anchor="middle">
+                 9 Months Anniversary
+            </text>
+        </svg>
+    </div>
+    <script>
+        function myfunction(){
+            document.getElementById("mydropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

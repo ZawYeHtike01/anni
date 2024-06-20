@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Anniversary</title>
+    <link href="https://fonts.cdnfonts.com/css/japanese-designs" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <style>
+       @import url('https://fonts.cdnfonts.com/css/japanese');
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #eae7dc;
+            display: block;
+        }
+        .header{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            background-color: #eae7dc;
+            
+            position: fixed;
+            /* border-bottom: 2px solid black; */
+            /* border-style: outset; */
+        }
+        .text{
+            color: #e98074;
+            font-weight: bolder;
+            font-size: 40px;
+            position: relative;
+            margin-top: 10px;
+            margin-left: 50%;
+            font-family:'Brush Script MT', cursive;
+        }
+        .dropbtn{
+            display: none;
+        }
+        .dropdown-content{
+            display: flex;
+            width:400px;
+            margin-top: 10px;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 15px 10px;
+            text-decoration: none;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .dropdown-content a:hover{
+            color: #e85a4f;
+        }
+        .text:hover{
+            color: #e85a4f;
+        }
+        .card{
+            display: flex;
+            height: 100vh;
+            
+        }
+        .player{
+            margin-top: 150px;
+            margin-left: 300px;
+            width: 300px;
+            height: 480px;
+            background: #e85a4f;
+            /*   margin: 100px; */
+            padding: 20px 14px 8px 14px;
+            border: none;
+            border-radius: 10px;
+            /* box-shadow: 10px 2px 90px -11px rgba(13,100,76,0.75);
+            -webkit-box-shadow: 10px 2px 90px -11px rgba(13,100,76,0.75);
+            -moz-box-shadow: 10px 2px 90px -11px rgba(13,100,76,0.75); */
+        }
+
+            .imgBx img
+            {
+            width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 10px;
+            }
+
+            .player audio
+            {
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 12px;
+            padding: 0;
+            border: none;
+            
+            }
+            .lyric-line {
+                font-size: 35px;
+                opacity: 0;
+                transition: opacity 1s;
+                font-family: "Noto Sans JP", sans-serif;
+                color: #e85a4f;                   
+            }
+
+            .lyric-line.show {
+                opacity: 1;
+            }
+            #lyrics-container{
+                margin-top: 350px;
+                margin-left: 40px;
+            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <button onclick="myfunction()" class="dropbtn glyphicon glyphicon-menu-hamburger" style="background-color: transparent;border: none;color: black;"></button>
+            <div id="mydropdown" class="dropdown-content">
+                <a href="../Html/home.html" >Home</a>
+                <a href="../Html/Anniversary.html" style="color: #E85A4F;">Anniversary</a>
+                <a href="../Html/nextvision.html">Next Vision</a>
+            </div>
+        </div>
+        <div class="text">Welcome A Thae Lay</div>
+    </div>
+    <div class="card">
+    <div class="player">
+        <div class="imgBx">
+          <img src="../Html/thaelay.jpg" alt="Luka Chuppi">
+        </div>
+        <audio id="song" controls>
+          <source src="../Html/Zenzenzense    [Your name OST] RADWIMPS.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div id="lyrics-container">
+        <!-- Lyrics lines will be dynamically added here -->
+    </div>
+    </div>
+    <script src="../Html/script.js"></script>
+    <script>
+        function myfunction(){
+            document.getElementById("mydropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
